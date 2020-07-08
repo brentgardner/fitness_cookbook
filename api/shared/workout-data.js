@@ -5,16 +5,22 @@ const data = {
             name: 'workout inside',
             description: 'A nice 40 minute leg and core workout that can be done in a small space with limited equipment',
             type: 'EMOM',
-            warmup: '',
-            main: 'Round1: 18 DB squates, 45 seconds of bycicle crunches, and DB squate jumps. /n round 2: 10 DB reverse lunges, DB Russian twists, Max effort burpees'
+            warmup: '1 minute of jumping jacks, 10 air squats, 10 walkouts',
+            main: 'Round1: 18 DB squates, 45 seconds of bycicle crunches, and DB squate jumps. /n round 2: 10 DB reverse lunges, DB Russian twists, Max effort burpees',
+            duration: 40,
+            favorite: true,
+            tags: ['high calorie',]
         },
         {
             id: 2,
-            name: 'Outside workiyt',
+            name: 'Outside workout',
             description: 'a sweaty outdoor routine with a mix of running and db work',
             type: 'EMOM',
             warmup: '',
-            main: 'Round1: 18 DB squates, 45 seconds of bycicle crunches, and DB squate jumps. /n run 400 meters. round 2: 10 DB reverse lunges, DB Russian twists, Max effort burpees run 400 meters'
+            main: 'Round1: 18 DB squates, 45 seconds of bycicle crunches, and DB squate jumps, run 400 meters. round 2: 10 DB reverse lunges, DB Russian twists, Max effort burpees run 400 meters',
+            duration: 30,
+            favorite: false,
+            tags: ['easy',]
         }
         
     ]

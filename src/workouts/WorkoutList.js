@@ -28,15 +28,21 @@ function WorkoutList({
   return (
     <div>
       {workouts.length === 0 && <div>Loading data ...</div>}
+
+      <div>Workouts: {workouts.length}</div>
+
       <ul className="workout-list">
         {workouts.map((workout, index) => (
-          <li key={workout.id} role="presentation" className="card">
+          <li key={workout.id} role="presentation" className="card-collection">
               <CardContent
                 name={workout.name}
                 description={workout.description}
                 type={workout.type}
                 warmup={workout.warmup}
                 main={workout.main}
+                duration={workout.duration}
+                favorite={workout.favorite}
+                tags={workout.tags}
               />
               <footer className="card-footer">
                 <ButtonFooter

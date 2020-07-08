@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router';
 
-import { ButtonFooter, InputDetail } from '../components';
+import { ButtonFooter, InputDetail} from '../components';
 
 function WorkoutDetail({
   workout: initWorkout,
@@ -42,6 +42,14 @@ function WorkoutDetail({
     setWorkout({ ...workout, main: e.target.value });
   }
 
+  function handleDurationChange(e) {
+    setWorkout({ ...workout, duration: e.target.value });
+  }
+
+  function handleFavoriteChange(e) {
+    setWorkout({ ...workout, favorite: e.target.value });
+  }
+
   return (
     <div className="card edit-detail">
       <header className="card-header">
@@ -78,24 +86,50 @@ function WorkoutDetail({
               Warm Up
             </label>
             <textarea
-              name="main"
+              id="warmup"
               placeholder="30 jumping jacks"
               className="textarea"
-              value={workout.warmups}
+              value={workout.warmup}
               onChange={handleWarmUpChange}
             />
           </div>
           <div className="field">
             <label className="label" htmlFor="main">
-              Main Workout
+              Workout
             </label>
             <textarea
-              name="main"
-              placeholder="100 Burpees"
+              id="main"
+              placeholder="100 burpees"
               className="textarea"
               value={workout.main}
               onChange={handleMainChange}
             />
+          </div>
+          <div className="field">
+            <label className="label" htmlFor="duration">
+              minutes
+            </label>
+            <input
+              name="duration"
+              className="input"
+              type="number"
+              min="1"
+              max="200"
+              defaultValue={workout.duration}
+              placeholder="30"
+              onChange={handleDurationChange}
+            />
+            </div>
+            <div className="field">
+            <label className="checkbox" htmlFor="favorite">
+              <input 
+                name="favorite"
+                type="checkbox"
+                checked={workout.favorite}
+                onChange={handleFavoriteChange}
+              />
+               Favorite
+            </label>
           </div>
         </div>
       </div>

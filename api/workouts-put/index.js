@@ -7,7 +7,10 @@ module.exports = async function (context, req) {
     description: req.body.description,
     type: req.body.type,
     warmup: req.body.warmup,
-    main: req.body.main
+    main: req.body.main,
+    duration: req.body.duration,
+    favorite: req.body.favorite,
+    tags: req.body.tags
   };
 
   try {
