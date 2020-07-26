@@ -1,8 +1,8 @@
 const data = require('../shared/workout-data');
 
 module.exports = async function (context, req) {
-  const workouts = {
-    id: undefined,
+  const workout = {
+    id: 5,
     name: req.body.name,
     description: req.body.description,
     type: req.body.type,
@@ -16,7 +16,9 @@ module.exports = async function (context, req) {
   try {
     const newWorkout = data.addWorkout(workout);
     context.res.status(201).json(newWorkout);
+
   } catch (error) {
+    console.log(error)
     context.res.status(500).send(error);
   }
 };

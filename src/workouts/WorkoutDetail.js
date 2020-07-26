@@ -19,6 +19,7 @@ function WorkoutDetail({
 
   function handleSave() {
     const chgWorkout = { ...workout, id: workout.id || null };
+    console.log(chgWorkout);
     handleSaveWorkout(chgWorkout);
   }
 
@@ -48,6 +49,10 @@ function WorkoutDetail({
 
   function handleFavoriteChange(e) {
     setWorkout({ ...workout, favorite: e.target.value });
+  }
+
+  function handleTagChange(e) {
+    setWorkout({ ...workout, tags: e.target.value });
   }
 
   return (

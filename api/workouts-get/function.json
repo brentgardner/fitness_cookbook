@@ -14,6 +14,15 @@
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "workouts",
+      "databaseName": "fitness",
+      "collectionName": "workouts",
+      "createIfNotExists": "false",
+      "connectionStringSetting": "fitnesscookbookcosmosdb_DOCUMENTDB"
     }
   ]
 }

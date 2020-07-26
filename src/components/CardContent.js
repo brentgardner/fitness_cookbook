@@ -21,7 +21,7 @@ const CardContent = ({ name, description, type, main, warmup, duration, favorite
       <div className="warmup">
         <h3 className="title is-6">Warm Up</h3>
 
-        <div class="content">
+        <div className="content">
           {warmup}
         </div>
         
@@ -29,18 +29,12 @@ const CardContent = ({ name, description, type, main, warmup, duration, favorite
       <div className="mainWorkout">
         <h3 className="title is-6">Workout</h3>
 
-        <div class="content">
+        <div className="content">
           {main}
         </div>
 
       </div>
-      {tags.length > 0 &&
-      <div className="tags">
-        {tags.map((tag, index) => (
-          <span className="tag">{tag}</span>
-        ))}       
-      </div>
-      }
+     
     </div>
   </div>
 );
